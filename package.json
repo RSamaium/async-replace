@@ -1,5 +1,5 @@
 {
-  "name": "async-replace",
+  "name": "async-replace-promise",
   "version": "2.0.0",
   "description": "Run replace on a string and update it asynchronous",
   "main": "async-replace.js",

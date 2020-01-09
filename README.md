@@ -1,4 +1,4 @@
-# async-replace
+# async-replace-promise
 
 Run replace on a string and update it asynchronous.
 
@@ -7,6 +7,10 @@ It's fork of https://github.com/kesla/async-replace but:
 - No dependencies
 - Returns a promise
 - Works in strict mode
+
+## Install
+
+`npm install async-replace-promise`
 
 ## usage
 
