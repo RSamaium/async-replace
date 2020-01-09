@@ -1,13 +1,10 @@
 {
   "name": "async-replace",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Run replace on a string and update it asynchronous",
   "main": "async-replace.js",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "async": "^1.4.2"
   },
   "devDependencies": {
     "tap": "~0.4.0"
@@ -17,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kesla/async-replace.git"
+    "url": "https://github.com/RSamaium/async-replace"
   },
   "keywords": [
     "string",
     "async",
     "replace"
   ],
-  "author": "David Björklund <david.bjorklund@gmail.com>",
+  "author": "David Björklund <david.bjorklund@gmail.com>, modified by Samuel Ronce",
   "license": "MIT"
 }
