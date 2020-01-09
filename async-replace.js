@@ -1,3 +1,5 @@
+'use strict'
+
 function toLocal(regexp) {
     var flags = '';
     if (regexp.ignoreCase) flags += 'i';
@@ -34,7 +36,6 @@ module.exports = function (string, regexp, replacer = function() {}) {
     var i = 0;
     var index = 0;
     var copy = toLocal(regexp);
-    copy.global = false;
     var callbacks = [];
     while (matched.length > 0) {
         var subString = matched.shift();
