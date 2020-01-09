@@ -7,6 +7,7 @@ It's fork of https://github.com/kesla/async-replace but:
 - No dependencies
 - Returns a promise
 - Works in strict mode
+- Tiny : < 0.6 Ko after minification of the file
 
 ## Install
 
@@ -21,7 +22,7 @@ This may sound more complicated than it is, so let's look at an example.
 Above is an example of using `String.prototype.replace` with a callback. The above could then be written in async-replace like this
 
 ```js
-import asyncReplace from 'asyncReplace'
+import asyncReplace from 'async-replace-promise'
 // or const asyncReplace = require('async-replace-promise');
 
 (async function() {
