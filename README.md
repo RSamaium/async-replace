@@ -18,7 +18,7 @@ Above is an example of using `String.prototype.replace` with a callback. The abo
 
 ```js
 import asyncReplace from 'asyncReplace'
-// or const asyncReplace = require('async-replace-promise')
+// or const asyncReplace = require('async-replace-promise');
 
 (async function() {
     
