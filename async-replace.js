@@ -14,11 +14,9 @@ function replaceLocal(string, regexp, replacer) {
         const args = matched.slice();
         args.push(matched.index);
         args.push(matched.input);
-        args.push(function (err, newString) {
-            if (err) return reject(err);
+        replacer(...args).then((newString) => {
             resolve(string.replace(regexp, newString));
-        });
-        replacer.apply(null, args);
+        }).catch(reject)
     })
 }
 
@@ -33,7 +31,6 @@ module.exports = function (string, regexp, replacer = function () {}) {
 
     let i = 0;
     let index = 0;
-
     const result = [];
     const copy = toLocal(regexp);
     const callbacks = [];
@@ -48,12 +45,11 @@ module.exports = function (string, regexp, replacer = function () {}) {
                 var args = match.slice();
                 args.push(index);
                 args.push(string);
-                args.push(function (err, newString) {
-                    if (err) return reject(err);
+                args.push();
+                replacer(...args).then(newString => {
                     result[j] = newString;
                     resolve(null);
-                });
-                replacer.apply(null, args);
+                }).catch(reject)
             }));
         })(i, nextIndex, subString);
 

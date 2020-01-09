@@ -22,7 +22,7 @@ import asyncReplace from 'asyncReplace'
 
 (async function() {
     
-    const replacer = async (match, p1, p2, p3, offset, string) => {
+    const replacer = (match, p1, p2, p3, offset, string) => {
         // p1 is nondigits, p2 digits, and p3 non-alphanumerics
         return new Promise(resolve => {
              setTimeout(() => {
