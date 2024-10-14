@@ -7,7 +7,9 @@ It's fork of https://github.com/kesla/async-replace but:
 - No dependencies
 - Returns a promise
 - Works in strict mode
-- Tiny : < 0.6 Ko after minification of the file
+- Tiny : < 0.6 Ko 
+- ESM and CJS compatible
+- Typescript support
 
 ## Install
 

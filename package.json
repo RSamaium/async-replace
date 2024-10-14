@@ -1,21 +1,25 @@
 {
   "name": "async-replace-promise",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Run replace on a string and update it asynchronous",
-  "main": "async-replace.js",
-  "directories": {
-    "test": "test"
+  "main": "dist/async-replace.js",
+  "module": "dist/async-replace.js",
+  "types": "dist/async-replace.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/async-replace.js",
+      "require": "./dist/async-replace.cjs",
+      "types": "./dist/async-replace.d.ts"
+    }
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "rollup": "^1.29.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-terser": "^5.1.3",
-    "tap": "~0.4.0"
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
   },
   "scripts": {
-    "test": "npx tap test/*.js",
-    "build": "npx rollup -c"
+    "test": "vitest",
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -27,5 +31,6 @@
     "replace"
   ],
   "author": "David Björklund <david.bjorklund@gmail.com>, modified by Samuel Ronce",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }

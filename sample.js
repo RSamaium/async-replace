@@ -1,5 +1,4 @@
-const asyncReplace = require('./async-replace');
-
+import asyncReplace from './async-replace';
 (async function() {
     
     const replacer = (match, p1, p2, p3, offset, string) => {
@@ -7,12 +6,14 @@ const asyncReplace = require('./async-replace');
         return new Promise(resolve => {
              setTimeout(() => {
                 resolve([p1, p2, p3].join(' - '))
-            }, 100);
+            }, 0);
         })
     }
 
     try {
+        console.time('asyncReplace');
         const result = await asyncReplace("abc12345#$*%", /([^\d]*)(\d*)([^\w]*)/g, replacer)
+        console.timeEnd('asyncReplace');
         console.log(result); // will print 'abc - 12345 - #$*%';
     }
     catch (err) {
